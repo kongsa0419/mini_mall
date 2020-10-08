@@ -4,3 +4,4 @@
 <h4>json 받기</h4>
 <img src="readme_img/json_object_complete.PNG" width="600px">
 <h4>출력</h4>
+<img src="readme_img/결과.PNG" width="600px">
