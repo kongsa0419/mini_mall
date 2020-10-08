@@ -34,7 +34,6 @@ body {
   background-color: var(--color-black);
   margin: 3px auto;
   font-size: 14px;
-  /* overflow: hidden; */
 }
 .firstLine {
   padding: 0px 12px;
@@ -87,18 +86,22 @@ body {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;  
-  overflow-y: scroll;
 }
 .clothAndDef>ul{
-padding: 0 ;
+  width: 100%;
+  position: relative;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  padding: 0 ;
+  overflow-y: scroll;
 }
 .clothAndDef>ul>li{
   width: 400px;
   display: flex;
-  flex-flow: nowrap row;
+  /* flex-flow: nowrap row; */
   align-items: center;
   background-color: var(--color-white);
-  margin: var(--size-space) 0px;
 }
 .clothAndDef>ul .item>img{
   width: calc(var(--size-button)*0.8);
