@@ -7,10 +7,12 @@
   --color-pink: #fd7f84;
   --color-light-grey: #dfdfdf;
   /* size */
+  --base-size-margin : 8px;
  --size-small : 12px; 
  --size-medium : 16px; 
  --size-large : 20px; 
  --size-button: 60px;
+ --size-space: 8px;
  /* annimation */
  --annimation-duration: 100ms;
 
@@ -23,32 +25,36 @@ ul {
   }
 body {
   height: 100vh;
-  width: fit-content;
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
+  justify-content: center;
   align-content: center;
-  /* flex-wrap: wrap; */
+  flex-wrap: nowrap;
   align-items: center;
   background-color: var(--color-black);
-  margin: 40px auto;
-  overflow: hidden;
+  margin: 3px auto;
   font-size: 14px;
+  /* overflow: hidden; */
 }
 .firstLine {
-  padding: 12px;
+  padding: 0px 12px;
   cursor: pointer;
   transition: transform 100ms ease;
+}
+.firstLine>img{
+  width: calc(var(--size-button));
+  height: calc(var(--size-button));
 }
 .secondLine {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: var(--size-space);
 }
 .secondLine .images>img{
   
-   width: var(--size-button);
-  height: var(--size-button); 
+   width: calc(var(--size-button)*0.7);
+  height: calc(var(--size-button)*0.7); 
   margin-right: 16px;
   cursor: pointer;
 }
@@ -56,10 +62,11 @@ body {
   margin-right: 8px;
   cursor: pointer;
   padding: 1px 5px;
-  width: fit-content;
-  height: var(--size-button);
+  width: fit-content+2px;
+  height: calc(var(--size-button)*0.7); 
   font-size: var(--size-small);
   border-radius: 5px;
+  border: none;
 }
 .buttons .blue{
   background-color: var(--color-blue);
@@ -75,5 +82,27 @@ body {
 .secondLine .buttons> button:hover {
   transform: scale(1.1);
 }
-
+.clothAndDef{
+  height: 60%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;  
+  overflow-y: scroll;
+}
+.clothAndDef>ul{
+padding: 0 ;
+}
+.clothAndDef>ul>li{
+  width: 400px;
+  display: flex;
+  flex-flow: nowrap row;
+  align-items: center;
+  background-color: var(--color-white);
+  margin: var(--size-space) 0px;
+}
+.clothAndDef>ul .item>img{
+  width: calc(var(--size-button)*0.8);
+  height: calc(var(--size-button)*0.8);
+  padding: calc(var(--base-size-margin)*0.7) var(--base-size-margin);
+}
 
